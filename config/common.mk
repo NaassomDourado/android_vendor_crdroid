@@ -244,6 +244,11 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
         endif
     endif
 endif
+
+# FOD Animations
+ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    UdfpsResources
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
